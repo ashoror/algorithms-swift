@@ -26,6 +26,8 @@
 /// `nums is sorted in an ascending order.`
 
 struct Solution {
+
+	/// Time: O(logn); Space: O(1)
 	func search(_ nums: [Int], _ target: Int) -> Int {
 		var left = 0
 		var right = nums.count - 1
