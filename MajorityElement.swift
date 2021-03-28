@@ -21,10 +21,10 @@
 ///
 /// `Follow-up: Could you solve the problem in linear time and in O(1) space?`
 
-struct Solution {
+struct Solution1 {
 
 	/// Time: O(n), Space: O(n)
-	func majorityElement1(_ nums: [Int]) -> Int {
+	func majorityElement(_ nums: [Int]) -> Int {
 
 		var hashMap: [Int: Int] = [:]
 		for num in nums {
@@ -43,12 +43,19 @@ struct Solution {
 
 		return maxValueKey
 	}
+}
+
+struct Solution2 {
 
 	/// Time: O(n), Space: O(n)
 	func majorityElement2(_ nums: [Int]) -> Int {
 		let newNums = nums.sorted()
 		return newNums[newNums.count / 2]
 	}
+
+}
+
+struct Solution3 {
 
 	/// Time: O(n), Space: O(1) - Boyer-Moore Voting Algorithm
 	func majorityElement3(_ nums: [Int]) -> Int {
